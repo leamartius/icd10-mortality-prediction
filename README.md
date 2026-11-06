@@ -58,7 +58,7 @@ In einem zusätzlichen experimentellen Ansatz werden ausschließlich Codeinforma
 
 Mithilfe von SHAP werden die Beiträge einzelner Merkmale zu den Modellvorhersagen analysiert. Dabei wird insbesondere untersucht, welche der entwickelten Merkmalskategorien tatsächlich für die Vorhersagen genutzt werden.
 
-## Ergebnisse
+## Ausgewählte Ergebnisse
 
 Die wichtigsten Ergebnisse der Hauptuntersuchung und des ergänzenden CCSR-Vergleichs sind in der folgenden Tabelle zusammengefasst:
 
