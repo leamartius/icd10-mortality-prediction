@@ -20,8 +20,9 @@ Die Analysen basieren auf dem klinischen Datensatz MIMIC-IV und umfassen die Ent
 - **Datenverarbeitung und Analyse:** pandas, NumPy, SciPy
 - **Machine Learning:** XGBoost, scikit-learn
 - **Visualisierung:** Matplotlib, Seaborn
+- **Modellauswahl:** Logistische Regression mit L2- bzw. Elastic-Net-Regularisierung, Random Forest und XGBoost (beste Performance: XGBoost)
+- **Modellbewertung:** Average Precision (AP), AUROC, Cross-Validation, patientenbasiertes Bootstrapping
 - **Modellinterpretation:** SHAP
-- **Modellbewertung:** Average Precision (AP), AUROC, Cross-Validation
 - **Feature Engineering:** Hierarchische ICD-10-Merkmale, Code-Prävalenzen bzw. Information Content, aggregierte Diagnose- und Behandlungscodemerkmale
 
 ## Methodisches Vorgehen
@@ -30,7 +31,7 @@ Die Analysen basieren auf dem klinischen Datensatz MIMIC-IV und umfassen die Ent
 
 Aufbereitung und Verknüpfung der für die Analyse relevanten Informationen aus dem MIMIC-IV-Datensatz, insbesondere zu Krankenhausaufenthalten, Diagnosen und medizinischen Prozeduren.
 
-Die Untersuchungseinheit bildet der Krankenhausaufenthalt. Als Zielvariable dient die Krankenhausmortalität.
+Die Untersuchungseinheit bildet der Krankenhausaufenthalt. Als Zielvariable dient die Krankenhausmortalität. Die finale Analysestichprobe umfasst 254.396 Krankenhausaufenthalte von 122.932 eindeutigen Patient:innen.
 
 ### 2. Feature Engineering
 
@@ -90,7 +91,7 @@ icd10-mortality-prediction/
         und Ergebnisauswertung
 ```
 
-Der Ordner `source code` enthält die Python-Skripte zur Umsetzung der einzelnen Analyseschritte.
+Der Ordner `source code` enthält die Python-Skripte zur Umsetzung der einzelnen Analyseschritte. Die Skripte sind entsprechend ihrer auszuführenden Reihenfolge nummeriert.
 
 ## Installation und Voraussetzungen
 
@@ -106,7 +107,7 @@ Für die vollständige Reproduktion der Analysen ist zusätzlich ein autorisiert
 
 Die Arbeit verwendet den öffentlich dokumentierten, jedoch zugangsbeschränkten klinischen Datensatz [MIMIC-IV v3.1](https://physionet.org/content/mimiciv/) über PhysioNet.
 
-Der Zugriff auf die Patientendaten setzt eine entsprechende Zugangsberechtigung voraus. **Die zugrundeliegenden Patientendaten sind daher nicht Bestandteil dieses GitHub-Repositories.**
+Der Zugriff auf die Patient:innendaten setzt eine entsprechende Zugangsberechtigung voraus. **Die zugrundeliegenden Patient:innendaten sind daher nicht Bestandteil dieses GitHub-Repositories.**
 
 ## Hintergrund
 
